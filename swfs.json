@@ -2,9 +2,51 @@
   "swfs": [
     {
       "location": "swfs/bfed.swf",
-      "title": "Vanilla",
+      "title": "1.5",
       "author": "Pokehidden",
-      "type": "Game"
+      "type": "Official"
+    },
+    {
+      "location": "https://d.facdn.net/art/pokehidden/1357005305/1357005305.pokehidden_banned_from_equestria__daily__alpha_1.4.swf",
+      "title": "1.4",
+      "author": "Pokehidden",
+      "type": "Official"
+    },
+    {
+      "location": "https://d.facdn.net/art/pokehidden/1338192815/1338192815.pokehidden_banned_from_equestria_daily_alpha_1_3.swf",
+      "title": "1.3",
+      "author": "Pokehidden",
+      "type": "Official"
+    },
+    {
+      "location": "https://pokehidden.archive.hexstream.net/banned_from_equestria_daily/alpha_12.swf",
+      "title": "1.2",
+      "author": "Pokehidden",
+      "type": "Official"
+    },
+    {
+      "location": "https://d.facdn.net/art/pokehidden/1324749963/1324749963.pokehidden_beta_2.swf",
+      "title": "1.1",
+      "author": "Pokehidden",
+      "type": "Official"
+    },
+    {
+      "location": "http://d.facdn.net/art/pokehidden/1322250832/1322250832.pokehidden_beta_1.swf",
+      "title": "1.0",
+      "author": "Pokehidden",
+      "type": "Official"
+    },
+    {
+      "location": "https://d.facdn.net/art/pokehidden/1383259961/1383259961.pokehidden_banned_forever.swf",
+      "title": "Banned [FOREVER]",
+      "author": "Pokehidden",
+      "type": "Official"
+    },
+    {
+      "location": "swfs/Tridashie.swf",
+      "title": "Tridashie",
+      "author": "Pokehidden",
+      "type": "Mod"
     }
   ]
 }

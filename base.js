@@ -3866,8 +3866,8 @@
         nn = document.getElementById("local-file"),
         tn = document.getElementById("sample-swfs"),
         rn = {
-          Animation: document.getElementById("anim-optgroup"),
-          Game: document.getElementById("games-optgroup"),
+          Mod: document.getElementById("mods-optgroup"),
+          Official: document.getElementById("official-optgroup"),
         },
         on = { letterbox: "on", logLevel: "warn" };
       function an() {
