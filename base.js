@@ -3063,7 +3063,7 @@
               break;
             case 10:
               (a =
-                "\n                    <p>Ruffle failed to load the Flash SWF file.</p>\n                    <p>The most likely reason is that the file no longer exists, so there is nothing for Ruffle to load.</p>\n                    <p>Try contacting the website administrator for help.</p>\n                "),
+                "\n                    <p>Ruffle failed to load the Flash SWF file.</p>\n                    <p>You are probably blocking it wit AdBlock/Ublock or Umatrix.</p>\n                    <p>This page doesnt have any ads.</p>\n                "),
                 (s =
                   '\n                    <li><a href="#" id="panic-view-details">View Error Details</a></li>\n                ');
               break;
