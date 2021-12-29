@@ -3069,13 +3069,13 @@
               break;
             case 6:
               (a =
-                '\n                    <p>Ruffle failed to load the required ".wasm" file component.</p>\n                    <p>Access to fetch has likely been blocked by CORS policy.</p>\n                    <p>If you are the server administrator, please consult the Ruffle wiki for help.</p>\n                '),
+                '\n                    <p>Ruffle failed to load the required ".wasm" file component.</p>\n                    <p>You are probably blocking it wit AdBlock/Ublock or Umatrix</p>\n                    <p>This page doesnt have any ads.</p>\n                '),
                 (s =
                   '\n                    <li><a target="_top" href="https://github.com/ruffle-rs/ruffle/wiki/Using-Ruffle#web">View Ruffle Wiki</a></li>\n                    <li><a href="#" id="panic-view-details">View Error Details</a></li>\n                ');
               break;
             case 3:
               (a =
-                "\n                    <p>Ruffle has encountered a major issue whilst trying to initialize.</p>\n                    <p>It seems like this page has missing or invalid files for running Ruffle.</p>\n                    <p>If you are the server administrator, please consult the Ruffle wiki for help.</p>\n                "),
+                "\n                    <p>Ruffle has encountered a major issue whilst trying to initialize.</p>\n                    <p>You are probably blocking it wit AdBlock/Ublock or Umatrix.</p>\n                    <p>This page doesnt have any ads.</p>\n                "),
                 (s =
                   '\n                    <li><a target="_top" href="https://github.com/ruffle-rs/ruffle/wiki/Using-Ruffle#addressing-a-compileerror">View Ruffle Wiki</a></li>\n                    <li><a href="#" id="panic-view-details">View Error Details</a></li>\n                ');
               break;
