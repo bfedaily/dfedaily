@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+<script>
+    if (location.protocol !== 'https:') {
+    location.replace(`https:${location.href.substring(location.protocol.length)}`);
+}
+</script> -->
+</head>
+<body>
+<h1>Simple recolor guide</h1><p>
+JAVA REQUIRED<p>
+<h2>Gui(Multiplatform, slow)</h2><p>
+<h3>Setup</h3><p>
+0-Create a directory to keep things more organized.<p>
+1-Download <a href='https://github.com/jindrapetrik/jpexs-decompiler/releases/download/version15.0.0/ffdec_15.0.0.zip'>ffdec</a> and extract it in your work directory.<p>
+2-Download the <a href='https://u.smutty.horse/lzxwgipcsiz.swf'>SWF file</a><p>
+3-Open ffdec, either drag and drop the SWF file or click 'Open...' and navigate to it.<p>
+<img src="res/1.png"><p>
+4-Click on 'shapes', scroll and select what you want to edit(hold Ctrl to select multiple), then right click 'Export selection' the recommended format is SVG, but PNG is supported, export to your work directory.<p>
+<img src="res/2.png"><img src="res/3.png"><p>
+<h3>Editing</h3><p>
+0a-If you chose SVG you can use <a href='https://inkscape.org/'>(Recommendation) Inkscape</a>, but you could probably use Adobe Illustrator (Or even a text editor).<p>
+0b-If you chose PNG you can use <a href='https://www.gimp.org/'>(Recommendation) Gimp</a>, but any image editor that supports transparency works.<p>
+1-Save overwriting the files.<p>
+<h3>Replacing sprites</h3><p>
+0-Go back to ffdec<p>
+1-Double-click the first thing you want to replace<p>
+2-On the left panel right-click the selected item then 'Replace...'<p>
+<img src="res/4.png"><p>
+3-Accept the warning(Check 'Do not show again')<p>
+<img src="res/5.png"><p>
+4-Select the file with matching number and click 'Open'.<p>
+<img src="res/6.png"><p>
+5-Select the next item and repeat step 4, until you finish.<p>
+<h3>Rebuild SWF</h3><p>
+0-Click 'Save as'<p>
+<img src="res/7.png"><p>
+1-Type a filename and save.<p>
+<img src="res/8.png"><p>
+2-Test your file either in <a href='https://www.adobe.com/support/flashplayer/debug_downloads.html'>Standalone Flash Player<a> or <a href=https://bfed.ga/>bfed.ga<a>(apparently only works on Firefox, I'm looking into that)<p>
+<img src="res/9.png"><img src="res/10.png"><p>
+3-If it works, don't be afraid to share it.<p>
+<h2>CLI and Automation Guide coming soon</h2><p>
+<!--
+<h3>Terminal only</h3>
+
+2-Download the sprites in either <a href='https://u.smutty.horse/mevzultwzre.zip'>SVG(Recommended)</a> or <a href='https://u.smutty.horse/mevzucmydci.zip'>PNG(Supported)</a> and extract in your work directory.<p>
+-->
+</body>
+</html>

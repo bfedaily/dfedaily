@@ -3,7 +3,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Ruffle Web Demo</title>
+        <title>BFED Player (Ruffle)</title>
         <link rel="stylesheet" href="css.css">
     <style>:root {
     --ruffle-blue: #37528c;
@@ -148,6 +148,11 @@ body {
 }
 </style></head>
     <body>
+     <script>
+    if (location.protocol !== 'https:') {
+    location.replace(`https:${location.href.substring(location.protocol.length)}`);
+}
+ </script>
         <div id="nav">
             <div id="title">
                 <a href="" target="_blank">
