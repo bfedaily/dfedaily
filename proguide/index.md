@@ -1,5 +1,7 @@
 # Automatization guide(Linux)
 
+[Basic Guide](/guide)
+
 This page is divided into automatic editing and automatic swf rebuilding.
 
 ## Set up enviroment
