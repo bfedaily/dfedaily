@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="/guide.css">
+<script type="text/javascript" src="/httpscheck.js"></script>
+<h1 id="automatization-guide-linux-">Automatization guide(Linux)</h1>
+<p>This page is divided into automatic editing and automatic swf rebuilding.</p>
+<h2 id="set-up-enviroment">Set up enviroment</h2>
+<p>Create a directory to work in, get the sprites and ffdec</p>
+<pre><code>mkdir <span class="hljs-regexp">~/bfededit &amp;&amp; cd ~/</span>bfededit
+wget -c <span class="hljs-string">https:</span><span class="hljs-comment">//u.smutty.horse/mewzkxuschr.zip &amp;&amp; unzip mewzkxuschr.zip &amp;&amp; rm mewzkxuschr.zip -f</span>
+wget -c <span class="hljs-string">https:</span><span class="hljs-comment">//u.smutty.horse/mevzultwzre.zip &amp;&amp; unzip mevzultwzre.zip &amp;&amp; rm mevzultwzre.zip -f</span>
+wget -c <span class="hljs-string">https:</span><span class="hljs-comment">//u.smutty.horse/mevzucmydci.zip &amp;&amp; unzip mevzucmydci.zip &amp;&amp; rm mevzucmydci.zip -f</span>
+</code></pre><p>You should end up with something like this:</p>
+<pre><code>├── bfeq<span class="hljs-selector-class">.swf</span>
+├── ffdec
+│   ├── ffdec<span class="hljs-selector-class">.jar</span>
+│   └── lib
+├── list<span class="hljs-selector-class">.txt</span>
+├── merge<span class="hljs-selector-class">.sh</span>
+├── shapes
+├── shapes(png)
+│   ├── <span class="hljs-number">1</span><span class="hljs-selector-class">.png</span>
+│   ├── [...]
+│   └── <span class="hljs-number">9999</span><span class="hljs-selector-class">.png</span>
+└── shapes(svg)
+    ├── <span class="hljs-number">1</span><span class="hljs-selector-class">.svg</span>
+    ├── [...]
+    └── <span class="hljs-number">9999</span>.svg
+</code></pre><h1 id="automatic-editing">Automatic editing</h1>
+<p>If everithing  looks fine you now have 2 options for editing depending on what you want to do, most recolors can bo done automatically:</p>
+<h2 id="example-">Example:</h2>
+<p>For this example, I will turn Rainbow Dash into Tridashie on all sprites, so i need to know what colors to replace for what other color:</p>
+<p><img src="res/rd.png" alt="rd">
+<img src="res/td.png" alt="td"></p>
+<p>Now i have to copy all sprites with RD to &#39;shapes&#39;, this has to be done by hand sadly.</p>
+<p>If you chose to use the .svg files, you can use something like sed to replace the colors on all files:</p>
+<pre><code><span class="hljs-built_in">cd</span> shapes
+</code></pre><pre><code>sed -i <span class="hljs-string">\</span>
+ -e s<span class="hljs-regexp">/ff585a/c90015/g</span> <span class="hljs-string">\</span>
+ -e s<span class="hljs-regexp">/f9f3ac/f69b29/g</span> <span class="hljs-string">\</span>
+ -e s<span class="hljs-regexp">/ff7d43/d45419/g</span> <span class="hljs-string">\</span>
+ -e s<span class="hljs-regexp">/d5388d/c90015/g</span> <span class="hljs-string">\</span>
+ -e s<span class="hljs-regexp">/6fcf5d/c90015/g</span> <span class="hljs-string">\</span>
+ -e s<span class="hljs-regexp">/75459b/f69b29/g</span> <span class="hljs-string">\</span>
+ -e s<span class="hljs-regexp">/35aaed/d45419/g</span> <span class="hljs-string">\</span>
+ -e s<span class="hljs-regexp">/9fe6ff/bbc1c5/g</span> <span class="hljs-string">\</span>
+ .<span class="hljs-comment">/*</span>
+</code></pre><h1 id="rebuilding-swf">Rebuilding swf</h1>
+<p>This could absolutely be done in a better way, but for works just run.</p>
+<pre><code>./<span class="hljs-keyword">merge</span>.<span class="hljs-keyword">sh</span>
+</code></pre><h3 id="content-of-merge-sh">Content of merge.sh</h3>
+<pre><code>rm bfedmod.swf <span class="hljs-comment">#Remove modded .swf if it exists.</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">'java -jar ../ffdec/ffdec.jar -replace ../bfeq.swf ../bfedmod.swf \'</span> &gt; command.txt <span class="hljs-comment">#Writes first part of the command.</span>
+<span class="hljs-built_in">pushd</span> shapes &amp;&amp; dir -1 | parallel <span class="hljs-built_in">printf</span> <span class="hljs-string">'{.}\ {}\ '</span> &gt;&gt; ../command.txt <span class="hljs-comment">#Lists files and ids (1 1.svg), then adds them to the command. </span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">''</span> &gt;&gt; ../command.txt
+<span class="hljs-built_in">echo</span> <span class="hljs-string">'echo done'</span> &gt;&gt; ../command.txt
+bash ../command.txt <span class="hljs-comment">#</span>
+<span class="hljs-built_in">popd</span> <span class="hljs-comment">#</span>
+</code></pre><p>It can sometimes take a bit, so don&#39;t assume it&#39;s stuck, just give it some time.</p>
+<p>When it&#39;s done, you should have a file called &#39;bfedmod.swf&#39; with all changes applied.</p>
+
